@@ -1,0 +1,14 @@
+# 示例的 requirements.txt
+
+# Web 开发
+Flask==2.3.2  # Flask 是一个轻量级的 Web 应用框架
+
+# 数据分析
+pandas==1.5.3  # Pandas 用于数据操作和分析
+numpy==1.24.3   # NumPy 是 Python 的科学计算库
+
+# HTTP 请求
+requests==2.31.0  # Requests 是一个简单的 HTTP 库
+
+# 其他工具
+matplotlib==3.7.1  # Matplotlib 用于绘制图形
