@@ -1,0 +1,30 @@
+name: Python CI
+
+on:
+  push:
+    branches:
+      - main  # 在主分支上推送时触发
+  pull_request:
+    branches:
+      - main  # 在向主分支提交 PR 时触发
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # 选择运行环境
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Python
+        uses: actions/setup-python@v2
+        with:
+          python-version: '3.9'  # 设置 Python 版本
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt  # 安装依赖
+
+      - name: Run Python script
+        run: python your_script.py  # 替换为你的 Python 脚本名
